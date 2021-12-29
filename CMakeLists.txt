@@ -4,5 +4,5 @@ cmake_minimum_required(VERSION 3.10)
 project(chip8)
 
 # add the executable
-add_executable(chip8 src/emu.cpp src/emu.h)
+add_executable(chip8 main.cpp src/Chip8.cpp src/Chip8.h)
 

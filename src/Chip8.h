@@ -51,6 +51,7 @@ public:
     std::default_random_engine randGen;
     std::uniform_int_distribution<uint8_t> randByte;
 
+    void run();
     void loadRom(char const *filename);
 
     //Instructions
@@ -77,4 +78,15 @@ public:
     void OP_Bnnn();
     void OP_Cxkk();
     void OP_Dxyn();
+    void OP_Ex9E();
+    void OP_ExA1();
+    void OP_Fx07();
+    void OP_Fx0A();
+    void OP_Fx15();
+    void OP_Fx18();
+    void OP_Fx1E();
+    void OP_Fx29();
+    void OP_Fx33();
+    void OP_Fx55();
+    void OP_Fx65();
 };
