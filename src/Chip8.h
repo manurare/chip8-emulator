@@ -4,9 +4,11 @@
 #include <chrono>
 #include <random>
 #include <cstring>
+#include "SDL.h"
+
 
 const unsigned int START_ADDRESS = 0x200;
-const unsigned int FONT_ADDRESS = 0x050;
+const unsigned int FONT_ADDRESS = 0x50;
 const unsigned int FONTSET_SIZE = 80;
 const int VIDEO_WIDTH = 64;
 const int VIDEO_HEIGHT = 32;
@@ -47,6 +49,7 @@ public:
     uint8_t keypad[16]{};
     uint32_t video[VIDEO_WIDTH * VIDEO_HEIGHT]{};
     uint16_t opcode{};
+    bool drawFlag;
 
     std::default_random_engine randGen;
     std::uniform_int_distribution<uint8_t> randByte;
